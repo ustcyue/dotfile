@@ -1,5 +1,5 @@
 #!/bin/bash
-CURRENT_DIR=~/mydotfile
+CURRENT_DIR=~/dotfile
 cp ${CURRENT_DIR}/.bash_profile ~/.bash_profile
 
 cp ${CURRENT_DIR}/.tmux.conf ~/.tmux.conf
