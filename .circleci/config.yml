@@ -7,3 +7,10 @@
      steps:
        - checkout
        - run: echo "hello world"
+   rebuild:
+     working_directory: ~/dotfile
+     docker:
+         - image: circleci/openjdk:8
+     steps:
+       - checkout
+       - run: echo "second hello world"
