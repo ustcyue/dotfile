@@ -4,7 +4,7 @@ export GOROOT=/usr/local/go/
 export PATH=$PATH:$GOPATH/bin
 #export SCALA_HOME=/Users/xiaoning/work/scala
 #export PATH=$PATH:$SCALA_HOME/bin
-
+export PYTHONPATH=~/.vim/plugged/python-mode/pymode:~/teralytics/hyperloop/python:$PYTHONPATH
 source $HOME/.private.sh
 alias ll="ls -l"
 alias vi="vim"
@@ -12,7 +12,7 @@ alias ctags="`brew --prefix`/bin/ctags"
 alias grep="grep -r --color "
 alias redis-start="sudo launchctl start io.redis.redis-server"
 alias redis-stop="sudo launchctl stop io.redis.redis-server"
-alias gosrc="cd $MYTEKSIGO"
+alias gosrc="cd $HOME/teralytics"
 
 #mysql.server start
 #redis-start
@@ -20,3 +20,6 @@ alias gosrc="cd $MYTEKSIGO"
 clear
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+export BINTRAY_USERNAME=ustcyue
+export BINTRAY_APIKEY=57e79ae5100fecbd8de8a7eae8f6017b2bf0c647
+export TMUX_TMPDIR=/tmp

@@ -62,7 +62,7 @@ let g:airline_theme='base16'
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_root_markers = ['README.md', '.git']
+let g:ctrlp_root_markers = ['.git']
 set makeprg=make
 "set cursorline
 "inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
@@ -111,7 +111,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'scrooloose/syntastic'
 Plug 'airblade/vim-gitgutter'
 Plug 'majutsushi/tagbar'
-Plug 'davits/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe'
 Plug 'jaxbot/semantic-highlight.vim'
 Plug 'rakr/vim-one'
 Plug 'rakr/vim-two-firewatch'
@@ -121,12 +121,13 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'mileszs/ack.vim'
 Plug 'tpope/vim-vinegar'
 Plug 'SirVer/ultisnips'
-Plug 'tell-k/vim-autopep8'
-Plug 'hdima/python-syntax'
+Plug 'python-mode/python-mode'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'fholgado/minibufexpl.vim'
 Plug 'scrooloose/nerdcommenter'
+Plug 'vim-scripts/SQLUtilities'
+Plug 'jphustman/align.vim'
 call plug#end()
 
 let python_highlight_all = 1
@@ -166,6 +167,8 @@ let g:semanticEnableFileTypes = {
             \   'elixir'     : 'elixir',
             \   'python'     : 'py',
             \   'go'         : 'go',
+            \   'scala'      : 'scala',
+            \   'sbt'        : 'sbt',
             \ }
 " Add backlists item in Golang
 let g:semanticBlacklistOverride = {
@@ -188,3 +191,12 @@ map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 nnoremap Q @q
 vnoremap . :normal .<CR>
 vnoremap Q :normal @q<CR>
+
+let g:pymode_rope_goto_definition_bind = "<C-]>"
+let g:pymode_rope_goto_definition_cmd = 'e'
+
+let g:pymode_options_max_line_length = 180
+let g:pymode_options_colorcolumn = 1
+let g:pymode_folding = 0
+set diffopt+=vertical
+autocmd QuickFixCmdPost *grep* cwindow
