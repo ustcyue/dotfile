@@ -20,6 +20,4 @@ alias gosrc="cd $HOME/teralytics"
 clear
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-export BINTRAY_USERNAME=ustcyue
-export BINTRAY_APIKEY=57e79ae5100fecbd8de8a7eae8f6017b2bf0c647
 export TMUX_TMPDIR=/tmp
